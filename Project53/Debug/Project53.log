@@ -1,0 +1,6 @@
+﻿  MyForm.cpp
+C:\Users\Edvard\source\repos\Project53\Project53\MyForm.h(434,36): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Edvard\source\repos\Project53\Project53\MyForm.h(461,21): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Edvard\source\repos\Project53\Project53\MyForm.cpp(5,15): warning C4551: function call missing argument list
+  MyForm.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  Project53.vcxproj -> C:\Users\Edvard\source\repos\Project53\Debug\Project53.exe
