@@ -1,4 +1,9 @@
-#pragma once
+﻿#pragma once
+
+
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
 
 namespace Project53 {
 
@@ -22,6 +27,42 @@ namespace Project53 {
 			//TODO: Add the constructor code here
 			//
 		}
+	public:
+
+		int glob_rez = 0;			// результат для MainTextBox
+		int skolko_cifr = 0;		// подсчет каличества цифр в числе
+		bool minus_ch = false;		// bool для перевода значения в отрицательный при нажатии кнопки "-"
+		int stnd_znac = 100;
+
+		// bool для замены положительного значения в отрицательное при нажатии кнопки "-"
+		bool minus_check()
+		{
+			return minus_ch;
+		}
+		// переход на следующую цифру в числе
+		void plus_cifra()
+		{
+			skolko_cifr++;
+		}
+
+		// возврат к предидущей цифре в числе
+		void minus_cifra()
+		{
+			skolko_cifr--;
+		}
+
+		// функционал к кнопке "clr"
+		void clear_cifra()
+		{
+			skolko_cifr = 0;
+			glob_rez = 0;
+		}
+
+		//
+		int back_cifra()
+		{
+			return skolko_cifr;
+		}
 
 	protected:
 		/// <summary>
@@ -35,28 +76,50 @@ namespace Project53 {
 			}
 		}
 	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::Button^ OneNumberButton;
+	private: System::Windows::Forms::Button^ TwoNumberButton;
+
 	protected:
-	private: System::Windows::Forms::Button^ button1;
-	private: System::Windows::Forms::Button^ button2;
-	private: System::Windows::Forms::Button^ button3;
-	private: System::Windows::Forms::Button^ button4;
-	private: System::Windows::Forms::Button^ button5;
-	private: System::Windows::Forms::Button^ button6;
-	private: System::Windows::Forms::Button^ button7;
-	private: System::Windows::Forms::Button^ button8;
-	private: System::Windows::Forms::Button^ button9;
-	private: System::Windows::Forms::Button^ button10;
-	private: System::Windows::Forms::Button^ button11;
-	private: System::Windows::Forms::Button^ button12;
-	private: System::Windows::Forms::Button^ button13;
-	private: System::Windows::Forms::Button^ button14;
-	private: System::Windows::Forms::Button^ button15;
+
+
+	private: System::Windows::Forms::Button^ ThreeNumberButton;
+	private: System::Windows::Forms::Button^ FourNumberButton;
+	private: System::Windows::Forms::Button^ FiveNumberButton;
+	private: System::Windows::Forms::Button^ SixNumberButton;
+	private: System::Windows::Forms::Button^ SevenNumberButton;
+	private: System::Windows::Forms::Button^ EightNumberButton;
+	private: System::Windows::Forms::Button^ NineNumberButton;
+	private: System::Windows::Forms::Button^ MinusButton;
+	private: System::Windows::Forms::Button^ CommaButton;
+
+
+
+
+
+
+
+
+
+
+
+
+	private: System::Windows::Forms::Button^ ZeroNumberButton;
+
+	private: System::Windows::Forms::Button^ EnterTextBoxButton;
+	private: System::Windows::Forms::Button^ CancelWindowButton;
+
+
+	private: System::Windows::Forms::Button^ ClearTextBoxButton;
+
 	private: System::Windows::Forms::Button^ button16;
-	private: System::Windows::Forms::Button^ button17;
-	private: System::Windows::Forms::Button^ button18;
-	private: System::Windows::Forms::Button^ button19;
-	private: System::Windows::Forms::Button^ button20;
-	private: System::Windows::Forms::TextBox^ textBox1;
+	private: System::Windows::Forms::Button^ MaxNumberButton;
+
+
+	private: System::Windows::Forms::Button^ MidiumBumberButton;
+
+	private: System::Windows::Forms::Button^ MinimumNumberButton;
+
+	private: System::Windows::Forms::TextBox^ MainTextBox;
 
 	private:
 		/// <summary>
@@ -72,27 +135,26 @@ namespace Project53 {
 		void InitializeComponent(void)
 		{
 			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->button1 = (gcnew System::Windows::Forms::Button());
-			this->button2 = (gcnew System::Windows::Forms::Button());
-			this->button3 = (gcnew System::Windows::Forms::Button());
-			this->button4 = (gcnew System::Windows::Forms::Button());
-			this->button5 = (gcnew System::Windows::Forms::Button());
-			this->button6 = (gcnew System::Windows::Forms::Button());
-			this->button7 = (gcnew System::Windows::Forms::Button());
-			this->button8 = (gcnew System::Windows::Forms::Button());
-			this->button9 = (gcnew System::Windows::Forms::Button());
-			this->button10 = (gcnew System::Windows::Forms::Button());
-			this->button11 = (gcnew System::Windows::Forms::Button());
-			this->button12 = (gcnew System::Windows::Forms::Button());
-			this->button13 = (gcnew System::Windows::Forms::Button());
-			this->button14 = (gcnew System::Windows::Forms::Button());
-			this->button15 = (gcnew System::Windows::Forms::Button());
+			this->OneNumberButton = (gcnew System::Windows::Forms::Button());
+			this->TwoNumberButton = (gcnew System::Windows::Forms::Button());
+			this->ThreeNumberButton = (gcnew System::Windows::Forms::Button());
+			this->FourNumberButton = (gcnew System::Windows::Forms::Button());
+			this->FiveNumberButton = (gcnew System::Windows::Forms::Button());
+			this->SixNumberButton = (gcnew System::Windows::Forms::Button());
+			this->SevenNumberButton = (gcnew System::Windows::Forms::Button());
+			this->EightNumberButton = (gcnew System::Windows::Forms::Button());
+			this->NineNumberButton = (gcnew System::Windows::Forms::Button());
+			this->MinusButton = (gcnew System::Windows::Forms::Button());
+			this->CommaButton = (gcnew System::Windows::Forms::Button());
+			this->ZeroNumberButton = (gcnew System::Windows::Forms::Button());
+			this->EnterTextBoxButton = (gcnew System::Windows::Forms::Button());
+			this->CancelWindowButton = (gcnew System::Windows::Forms::Button());
+			this->ClearTextBoxButton = (gcnew System::Windows::Forms::Button());
 			this->button16 = (gcnew System::Windows::Forms::Button());
-			this->button17 = (gcnew System::Windows::Forms::Button());
-			this->button18 = (gcnew System::Windows::Forms::Button());
-			this->button19 = (gcnew System::Windows::Forms::Button());
-			this->button20 = (gcnew System::Windows::Forms::Button());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->MaxNumberButton = (gcnew System::Windows::Forms::Button());
+			this->MidiumBumberButton = (gcnew System::Windows::Forms::Button());
+			this->MinimumNumberButton = (gcnew System::Windows::Forms::Button());
+			this->MainTextBox = (gcnew System::Windows::Forms::TextBox());
 			this->SuspendLayout();
 			// 
 			// label1
@@ -104,241 +166,230 @@ namespace Project53 {
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"Set to...";
 			// 
-			// button1
+			// OneNumberButton
 			// 
-			this->button1->Location = System::Drawing::Point(28, 176);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(48, 23);
-			this->button1->TabIndex = 1;
-			this->button1->Text = L"1";
-			this->button1->UseVisualStyleBackColor = true;
-			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
+			this->OneNumberButton->Location = System::Drawing::Point(28, 176);
+			this->OneNumberButton->Name = L"OneNumberButton";
+			this->OneNumberButton->Size = System::Drawing::Size(48, 23);
+			this->OneNumberButton->TabIndex = 1;
+			this->OneNumberButton->Text = L"1";
+			this->OneNumberButton->UseVisualStyleBackColor = true;
+			this->OneNumberButton->Click += gcnew System::EventHandler(this, &MyForm::OneNumberButton_Click);
 			// 
-			// button2
+			// TwoNumberButton
 			// 
-			this->button2->Location = System::Drawing::Point(73, 176);
-			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(48, 23);
-			this->button2->TabIndex = 2;
-			this->button2->Text = L"2";
-			this->button2->UseVisualStyleBackColor = true;
-			this->button2->Click += gcnew System::EventHandler(this, &MyForm::button2_Click);
+			this->TwoNumberButton->Location = System::Drawing::Point(73, 176);
+			this->TwoNumberButton->Name = L"TwoNumberButton";
+			this->TwoNumberButton->Size = System::Drawing::Size(48, 23);
+			this->TwoNumberButton->TabIndex = 2;
+			this->TwoNumberButton->Text = L"2";
+			this->TwoNumberButton->UseVisualStyleBackColor = true;
+			this->TwoNumberButton->Click += gcnew System::EventHandler(this, &MyForm::TwoNumberButton_Click);
 			// 
-			// button3
+			// ThreeNumberButton
 			// 
-			this->button3->Location = System::Drawing::Point(118, 176);
-			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(48, 23);
-			this->button3->TabIndex = 3;
-			this->button3->Text = L"3";
-			this->button3->UseVisualStyleBackColor = true;
-			this->button3->Click += gcnew System::EventHandler(this, &MyForm::button3_Click);
+			this->ThreeNumberButton->Location = System::Drawing::Point(118, 176);
+			this->ThreeNumberButton->Name = L"ThreeNumberButton";
+			this->ThreeNumberButton->Size = System::Drawing::Size(48, 23);
+			this->ThreeNumberButton->TabIndex = 3;
+			this->ThreeNumberButton->Text = L"3";
+			this->ThreeNumberButton->UseVisualStyleBackColor = true;
+			this->ThreeNumberButton->Click += gcnew System::EventHandler(this, &MyForm::ThreeNumberButton_Click);
 			// 
-			// button4
+			// FourNumberButton
 			// 
-			this->button4->Location = System::Drawing::Point(28, 156);
-			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(48, 23);
-			this->button4->TabIndex = 6;
-			this->button4->Text = L"4";
-			this->button4->UseVisualStyleBackColor = true;
-			this->button4->Click += gcnew System::EventHandler(this, &MyForm::button4_Click);
+			this->FourNumberButton->Location = System::Drawing::Point(28, 156);
+			this->FourNumberButton->Name = L"FourNumberButton";
+			this->FourNumberButton->Size = System::Drawing::Size(48, 23);
+			this->FourNumberButton->TabIndex = 6;
+			this->FourNumberButton->Text = L"4";
+			this->FourNumberButton->UseVisualStyleBackColor = true;
+			this->FourNumberButton->Click += gcnew System::EventHandler(this, &MyForm::FourNumberButton_Click);
 			// 
-			// button5
+			// FiveNumberButton
 			// 
-			this->button5->Location = System::Drawing::Point(73, 156);
-			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(48, 23);
-			this->button5->TabIndex = 5;
-			this->button5->Text = L"5";
-			this->button5->UseVisualStyleBackColor = true;
-			this->button5->Click += gcnew System::EventHandler(this, &MyForm::button5_Click);
+			this->FiveNumberButton->Location = System::Drawing::Point(73, 156);
+			this->FiveNumberButton->Name = L"FiveNumberButton";
+			this->FiveNumberButton->Size = System::Drawing::Size(48, 23);
+			this->FiveNumberButton->TabIndex = 5;
+			this->FiveNumberButton->Text = L"5";
+			this->FiveNumberButton->UseVisualStyleBackColor = true;
+			this->FiveNumberButton->Click += gcnew System::EventHandler(this, &MyForm::FiveNumberButton_Click);
 			// 
-			// button6
+			// SixNumberButton
 			// 
-			this->button6->Location = System::Drawing::Point(118, 156);
-			this->button6->Name = L"button6";
-			this->button6->Size = System::Drawing::Size(48, 23);
-			this->button6->TabIndex = 4;
-			this->button6->Text = L"6";
-			this->button6->UseVisualStyleBackColor = true;
-			this->button6->Click += gcnew System::EventHandler(this, &MyForm::button6_Click);
+			this->SixNumberButton->Location = System::Drawing::Point(118, 156);
+			this->SixNumberButton->Name = L"SixNumberButton";
+			this->SixNumberButton->Size = System::Drawing::Size(48, 23);
+			this->SixNumberButton->TabIndex = 4;
+			this->SixNumberButton->Text = L"6";
+			this->SixNumberButton->UseVisualStyleBackColor = true;
+			this->SixNumberButton->Click += gcnew System::EventHandler(this, &MyForm::SixNumberButton_Click);
 			// 
-			// button7
+			// SevenNumberButton
 			// 
-			this->button7->Location = System::Drawing::Point(28, 136);
-			this->button7->Name = L"button7";
-			this->button7->Size = System::Drawing::Size(48, 23);
-			this->button7->TabIndex = 9;
-			this->button7->Text = L"7";
-			this->button7->UseVisualStyleBackColor = true;
-			this->button7->Click += gcnew System::EventHandler(this, &MyForm::button7_Click);
+			this->SevenNumberButton->Location = System::Drawing::Point(28, 136);
+			this->SevenNumberButton->Name = L"SevenNumberButton";
+			this->SevenNumberButton->Size = System::Drawing::Size(48, 23);
+			this->SevenNumberButton->TabIndex = 9;
+			this->SevenNumberButton->Text = L"7";
+			this->SevenNumberButton->UseVisualStyleBackColor = true;
+			this->SevenNumberButton->Click += gcnew System::EventHandler(this, &MyForm::SevenNumberButton_Click);
 			// 
-			// button8
+			// EightNumberButton
 			// 
-			this->button8->Location = System::Drawing::Point(73, 136);
-			this->button8->Name = L"button8";
-			this->button8->Size = System::Drawing::Size(48, 23);
-			this->button8->TabIndex = 8;
-			this->button8->Text = L"8";
-			this->button8->UseVisualStyleBackColor = true;
-			this->button8->Click += gcnew System::EventHandler(this, &MyForm::button8_Click);
+			this->EightNumberButton->Location = System::Drawing::Point(73, 136);
+			this->EightNumberButton->Name = L"EightNumberButton";
+			this->EightNumberButton->Size = System::Drawing::Size(48, 23);
+			this->EightNumberButton->TabIndex = 8;
+			this->EightNumberButton->Text = L"8";
+			this->EightNumberButton->UseVisualStyleBackColor = true;
+			this->EightNumberButton->Click += gcnew System::EventHandler(this, &MyForm::EightNumberButton_Click);
 			// 
-			// button9
+			// NineNumberButton
 			// 
-			this->button9->Location = System::Drawing::Point(118, 136);
-			this->button9->Name = L"button9";
-			this->button9->Size = System::Drawing::Size(48, 23);
-			this->button9->TabIndex = 7;
-			this->button9->Text = L"9";
-			this->button9->UseVisualStyleBackColor = true;
-			this->button9->Click += gcnew System::EventHandler(this, &MyForm::button9_Click);
+			this->NineNumberButton->Location = System::Drawing::Point(118, 136);
+			this->NineNumberButton->Name = L"NineNumberButton";
+			this->NineNumberButton->Size = System::Drawing::Size(48, 23);
+			this->NineNumberButton->TabIndex = 7;
+			this->NineNumberButton->Text = L"9";
+			this->NineNumberButton->UseVisualStyleBackColor = true;
+			this->NineNumberButton->Click += gcnew System::EventHandler(this, &MyForm::NineNumberButton_Click);
 			// 
-			// button10
+			// MinusButton
 			// 
-			this->button10->Location = System::Drawing::Point(118, 205);
-			this->button10->Name = L"button10";
-			this->button10->Size = System::Drawing::Size(48, 23);
-			this->button10->TabIndex = 12;
-			this->button10->Text = L"-";
-			this->button10->UseVisualStyleBackColor = true;
-			this->button10->Click += gcnew System::EventHandler(this, &MyForm::button10_Click);
+			this->MinusButton->Location = System::Drawing::Point(118, 205);
+			this->MinusButton->Name = L"MinusButton";
+			this->MinusButton->Size = System::Drawing::Size(48, 23);
+			this->MinusButton->TabIndex = 12;
+			this->MinusButton->Text = L"-";
+			this->MinusButton->UseVisualStyleBackColor = true;
+			this->MinusButton->Click += gcnew System::EventHandler(this, &MyForm::MinusButton_Click);
 			// 
-			// button11
+			// CommaButton
 			// 
-			this->button11->Location = System::Drawing::Point(73, 205);
-			this->button11->Name = L"button11";
-			this->button11->Size = System::Drawing::Size(48, 23);
-			this->button11->TabIndex = 11;
-			this->button11->Text = L",";
-			this->button11->UseVisualStyleBackColor = true;
-			this->button11->Click += gcnew System::EventHandler(this, &MyForm::button11_Click);
+			this->CommaButton->Location = System::Drawing::Point(73, 205);
+			this->CommaButton->Name = L"CommaButton";
+			this->CommaButton->Size = System::Drawing::Size(48, 23);
+			this->CommaButton->TabIndex = 11;
+			this->CommaButton->Text = L",";
+			this->CommaButton->UseVisualStyleBackColor = true;
+			this->CommaButton->Click += gcnew System::EventHandler(this, &MyForm::CommaButton_Click);
 			// 
-			// button12
+			// ZeroNumberButton
 			// 
-			this->button12->Location = System::Drawing::Point(28, 205);
-			this->button12->Name = L"button12";
-			this->button12->Size = System::Drawing::Size(48, 23);
-			this->button12->TabIndex = 10;
-			this->button12->Text = L"0";
-			this->button12->UseVisualStyleBackColor = true;
-			this->button12->Click += gcnew System::EventHandler(this, &MyForm::button12_Click);
+			this->ZeroNumberButton->Location = System::Drawing::Point(28, 205);
+			this->ZeroNumberButton->Name = L"ZeroNumberButton";
+			this->ZeroNumberButton->Size = System::Drawing::Size(48, 23);
+			this->ZeroNumberButton->TabIndex = 10;
+			this->ZeroNumberButton->Text = L"0";
+			this->ZeroNumberButton->UseVisualStyleBackColor = true;
+			this->ZeroNumberButton->Click += gcnew System::EventHandler(this, &MyForm::ZeroNumberButton_Click);
 			// 
-			// button13
+			// EnterTextBoxButton
 			// 
-			this->button13->Location = System::Drawing::Point(28, 236);
-			this->button13->Name = L"button13";
-			this->button13->Size = System::Drawing::Size(105, 37);
-			this->button13->TabIndex = 13;
-			this->button13->Text = L"Enter";
-			this->button13->UseVisualStyleBackColor = true;
-			this->button13->Click += gcnew System::EventHandler(this, &MyForm::button13_Click);
+			this->EnterTextBoxButton->Location = System::Drawing::Point(28, 236);
+			this->EnterTextBoxButton->Name = L"EnterTextBoxButton";
+			this->EnterTextBoxButton->Size = System::Drawing::Size(105, 37);
+			this->EnterTextBoxButton->TabIndex = 13;
+			this->EnterTextBoxButton->Text = L"Enter";
+			this->EnterTextBoxButton->UseVisualStyleBackColor = true;
+			this->EnterTextBoxButton->Click += gcnew System::EventHandler(this, &MyForm::EnterTextBoxButton_Click);
 			// 
-			// button14
+			// CancelWindowButton
 			// 
-			this->button14->Location = System::Drawing::Point(150, 236);
-			this->button14->Name = L"button14";
-			this->button14->Size = System::Drawing::Size(105, 37);
-			this->button14->TabIndex = 14;
-			this->button14->Text = L"Cancel";
-			this->button14->UseVisualStyleBackColor = true;
-			this->button14->Click += gcnew System::EventHandler(this, &MyForm::button14_Click);
+			this->CancelWindowButton->Location = System::Drawing::Point(150, 236);
+			this->CancelWindowButton->Name = L"CancelWindowButton";
+			this->CancelWindowButton->Size = System::Drawing::Size(105, 37);
+			this->CancelWindowButton->TabIndex = 14;
+			this->CancelWindowButton->Text = L"Cancel";
+			this->CancelWindowButton->UseVisualStyleBackColor = true;
+			this->CancelWindowButton->Click += gcnew System::EventHandler(this, &MyForm::CancelWindowButton_Click);
 			// 
-			// button15
+			// ClearTextBoxButton
 			// 
-			this->button15->Location = System::Drawing::Point(180, 136);
-			this->button15->Name = L"button15";
-			this->button15->Size = System::Drawing::Size(75, 23);
-			this->button15->TabIndex = 15;
-			this->button15->Text = L"Clr";
-			this->button15->UseVisualStyleBackColor = true;
-			this->button15->Click += gcnew System::EventHandler(this, &MyForm::button15_Click);
+			this->ClearTextBoxButton->Location = System::Drawing::Point(180, 147);
+			this->ClearTextBoxButton->Name = L"ClearTextBoxButton";
+			this->ClearTextBoxButton->Size = System::Drawing::Size(75, 23);
+			this->ClearTextBoxButton->TabIndex = 15;
+			this->ClearTextBoxButton->Text = L"Clr";
+			this->ClearTextBoxButton->UseVisualStyleBackColor = true;
+			this->ClearTextBoxButton->Click += gcnew System::EventHandler(this, &MyForm::ClearTextBoxButton_Click);
 			// 
-			// button16
+			// ClearLastOneButton
 			// 
-			this->button16->Location = System::Drawing::Point(180, 165);
-			this->button16->Name = L"button16";
+			this->button16->Location = System::Drawing::Point(180, 176);
+			this->button16->Name = L"ClearLastOneButton";
 			this->button16->Size = System::Drawing::Size(75, 23);
 			this->button16->TabIndex = 16;
 			this->button16->Text = L"<-";
 			this->button16->UseVisualStyleBackColor = true;
-			this->button16->Click += gcnew System::EventHandler(this, &MyForm::button16_Click);
+			this->button16->Click += gcnew System::EventHandler(this, &MyForm::ClearLastOneButton_Click);
 			// 
-			// button17
+			// MaxNumberButton
 			// 
-			this->button17->Location = System::Drawing::Point(180, 194);
-			this->button17->Name = L"button17";
-			this->button17->Size = System::Drawing::Size(75, 23);
-			this->button17->TabIndex = 17;
-			this->button17->Text = L"e";
-			this->button17->UseVisualStyleBackColor = true;
-			this->button17->Click += gcnew System::EventHandler(this, &MyForm::button17_Click);
+			this->MaxNumberButton->Location = System::Drawing::Point(177, 103);
+			this->MaxNumberButton->Name = L"MaxNumberButton";
+			this->MaxNumberButton->Size = System::Drawing::Size(78, 23);
+			this->MaxNumberButton->TabIndex = 20;
+			this->MaxNumberButton->Text = L"Max";
+			this->MaxNumberButton->UseVisualStyleBackColor = true;
+			this->MaxNumberButton->Click += gcnew System::EventHandler(this, &MyForm::MaxNumberButton_Click);
 			// 
-			// button18
+			// MidiumBumberButton
 			// 
-			this->button18->Location = System::Drawing::Point(177, 103);
-			this->button18->Name = L"button18";
-			this->button18->Size = System::Drawing::Size(78, 23);
-			this->button18->TabIndex = 20;
-			this->button18->Text = L"Max";
-			this->button18->UseVisualStyleBackColor = true;
-			this->button18->Click += gcnew System::EventHandler(this, &MyForm::button18_Click);
+			this->MidiumBumberButton->Location = System::Drawing::Point(102, 103);
+			this->MidiumBumberButton->Name = L"MidiumBumberButton";
+			this->MidiumBumberButton->Size = System::Drawing::Size(78, 23);
+			this->MidiumBumberButton->TabIndex = 19;
+			this->MidiumBumberButton->Text = L"Mid";
+			this->MidiumBumberButton->UseVisualStyleBackColor = true;
+			this->MidiumBumberButton->Click += gcnew System::EventHandler(this, &MyForm::MidiumNumberButton_Click);
 			// 
-			// button19
+			// MinimumNumberButton
 			// 
-			this->button19->Location = System::Drawing::Point(102, 103);
-			this->button19->Name = L"button19";
-			this->button19->Size = System::Drawing::Size(78, 23);
-			this->button19->TabIndex = 19;
-			this->button19->Text = L"Mid";
-			this->button19->UseVisualStyleBackColor = true;
-			this->button19->Click += gcnew System::EventHandler(this, &MyForm::button19_Click);
+			this->MinimumNumberButton->Location = System::Drawing::Point(28, 103);
+			this->MinimumNumberButton->Name = L"MinimumNumberButton";
+			this->MinimumNumberButton->Size = System::Drawing::Size(78, 23);
+			this->MinimumNumberButton->TabIndex = 18;
+			this->MinimumNumberButton->Text = L"Min";
+			this->MinimumNumberButton->UseVisualStyleBackColor = true;
+			this->MinimumNumberButton->Click += gcnew System::EventHandler(this, &MyForm::MinimumNumberButton_Click);
 			// 
-			// button20
+			// MainTextBox
 			// 
-			this->button20->Location = System::Drawing::Point(28, 103);
-			this->button20->Name = L"button20";
-			this->button20->Size = System::Drawing::Size(78, 23);
-			this->button20->TabIndex = 18;
-			this->button20->Text = L"Min";
-			this->button20->UseVisualStyleBackColor = true;
-			this->button20->Click += gcnew System::EventHandler(this, &MyForm::button20_Click);
-			// 
-			// textBox1
-			// 
-			this->textBox1->Location = System::Drawing::Point(28, 52);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->ReadOnly = true;
-			this->textBox1->Size = System::Drawing::Size(227, 20);
-			this->textBox1->TabIndex = 21;
-			this->textBox1->Text = L"0";
+			this->MainTextBox->Location = System::Drawing::Point(28, 52);
+			this->MainTextBox->Name = L"MainTextBox";
+			this->MainTextBox->ReadOnly = true;
+			this->MainTextBox->Size = System::Drawing::Size(227, 20);
+			this->MainTextBox->TabIndex = 21;
+			this->MainTextBox->Text = L"0";
 			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(276, 304);
-			this->Controls->Add(this->textBox1);
-			this->Controls->Add(this->button18);
-			this->Controls->Add(this->button19);
-			this->Controls->Add(this->button20);
-			this->Controls->Add(this->button17);
+			this->Controls->Add(this->MainTextBox);
+			this->Controls->Add(this->MaxNumberButton);
+			this->Controls->Add(this->MidiumBumberButton);
+			this->Controls->Add(this->MinimumNumberButton);
 			this->Controls->Add(this->button16);
-			this->Controls->Add(this->button15);
-			this->Controls->Add(this->button14);
-			this->Controls->Add(this->button13);
-			this->Controls->Add(this->button10);
-			this->Controls->Add(this->button11);
-			this->Controls->Add(this->button12);
-			this->Controls->Add(this->button7);
-			this->Controls->Add(this->button8);
-			this->Controls->Add(this->button9);
-			this->Controls->Add(this->button4);
-			this->Controls->Add(this->button5);
-			this->Controls->Add(this->button6);
-			this->Controls->Add(this->button3);
-			this->Controls->Add(this->button2);
-			this->Controls->Add(this->button1);
+			this->Controls->Add(this->ClearTextBoxButton);
+			this->Controls->Add(this->CancelWindowButton);
+			this->Controls->Add(this->EnterTextBoxButton);
+			this->Controls->Add(this->MinusButton);
+			this->Controls->Add(this->CommaButton);
+			this->Controls->Add(this->ZeroNumberButton);
+			this->Controls->Add(this->SevenNumberButton);
+			this->Controls->Add(this->EightNumberButton);
+			this->Controls->Add(this->NineNumberButton);
+			this->Controls->Add(this->FourNumberButton);
+			this->Controls->Add(this->FiveNumberButton);
+			this->Controls->Add(this->SixNumberButton);
+			this->Controls->Add(this->ThreeNumberButton);
+			this->Controls->Add(this->TwoNumberButton);
+			this->Controls->Add(this->OneNumberButton);
 			this->Controls->Add(this->label1);
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";
@@ -347,130 +398,137 @@ namespace Project53 {
 
 		}
 #pragma endregion
-/*3*/private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+/*1*/private: System::Void OneNumberButton_Click(System::Object^ sender, System::EventArgs^ e) {
 		double result;
-		result = System::Convert::ToDouble(textBox1->Text);
-		if (result == 0){ textBox1->Text = System::Convert::ToString("3"); }
-		else if (result == -1000) { textBox1->Text = System::Convert::ToString("-3"); }
-		else if (result == -0.0001) { textBox1->Text = System::Convert::ToString("-0.3"); }
-		else textBox1->Text += System::Convert::ToString("3");
+		result = System::Convert::ToDouble(MainTextBox->Text);
+		if (result == 0) { MainTextBox->Text = System::Convert::ToString("1"); }
+		else if (result == -1000) { MainTextBox->Text = System::Convert::ToString("-1"); }
+		else if (result == -0.0001) { MainTextBox->Text = System::Convert::ToString("-0.1"); }
+		else MainTextBox->Text += System::Convert::ToString("1");
 	}
-/*7*/private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) {
+/*2*/private: System::Void TwoNumberButton_Click(System::Object^ sender, System::EventArgs^ e) {
 		double result;
-		result = System::Convert::ToDouble(textBox1->Text);
-		if (result == 0) { textBox1->Text = System::Convert::ToString("7"); }
-		else if (result == -1000) { textBox1->Text = System::Convert::ToString("-7"); }
-		else if (result == -0.0001) { textBox1->Text = System::Convert::ToString("-0.7"); }
-		else textBox1->Text += System::Convert::ToString("7");
+		result = System::Convert::ToDouble(MainTextBox->Text);
+		if (result == 0) { MainTextBox->Text = System::Convert::ToString("2"); }
+		else if (result == '-') { MainTextBox->Text = "-2"; }
+		else if (result == -0.0001) { MainTextBox->Text = System::Convert::ToString("-0.2"); }
+		else MainTextBox->Text += System::Convert::ToString("2");
 	}
-	/*Mid*/private: System::Void button19_Click(System::Object^ sender, System::EventArgs^ e) {
-		MessageBox::Show("", "Setting mid");
-	}
-/*1*/private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		double result;
-		result = System::Convert::ToDouble(textBox1->Text);
-		if (result == 0) { textBox1->Text = System::Convert::ToString("1"); }
-		else if (result == -1000) { textBox1->Text = System::Convert::ToString("-1"); }
-		else if (result == -0.0001) { textBox1->Text = System::Convert::ToString("-0.1"); }
-		else textBox1->Text += System::Convert::ToString("1");
-	}
-/*2*/private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-		double result;
-		result = System::Convert::ToDouble(textBox1->Text);
-		if (result == 0) { textBox1->Text = System::Convert::ToString("2"); }
-		else if (result == -1000) { textBox1->Text = System::Convert::ToString("-2"); }
-		else if (result == -0.0001) { textBox1->Text = System::Convert::ToString("-0.2"); }
-		else textBox1->Text += System::Convert::ToString("2");
-	}
-/*4*/private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
-		double result;
-		result = System::Convert::ToDouble(textBox1->Text);
-		if (result == 0) { textBox1->Text = System::Convert::ToString("4"); }
-		else if (result == -1000) { textBox1->Text = System::Convert::ToString("-4"); }
-		else if (result == -0.0001) { textBox1->Text = System::Convert::ToString("-0.4"); }
-		else textBox1->Text += System::Convert::ToString("4");
-	}
-/*5*/private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
-		double result;
-		result = System::Convert::ToDouble(textBox1->Text);
-		if (result == 0) { textBox1->Text = System::Convert::ToString("5"); }
-		else if (result == -1000) { textBox1->Text = System::Convert::ToString("-5"); }
-		else if (result == -0.0001) { textBox1->Text = System::Convert::ToString("-0.5"); }
-		else textBox1->Text += System::Convert::ToString("5");
-	}
-/*6*/private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
-		double result;
-		result = System::Convert::ToDouble(textBox1->Text);
-		if (result == 0) { textBox1->Text = System::Convert::ToString("6"); }
-		else if (result == -1000) { textBox1->Text = System::Convert::ToString("-6"); }
-		else if (result == -0.0001) { textBox1->Text = System::Convert::ToString("-0.6"); }
-		else textBox1->Text += System::Convert::ToString("6");
-	}
-/*8*/private: System::Void button8_Click(System::Object^ sender, System::EventArgs^ e) {
-		double result;
-		result = System::Convert::ToDouble(textBox1->Text);
-		if (result == 0) { textBox1->Text = System::Convert::ToString("8"); }
-		else if (result == -1000) { textBox1->Text = System::Convert::ToString("-8"); }
-		else if (result == -0.0001) { textBox1->Text = System::Convert::ToString("-0.8"); }
-		else textBox1->Text += System::Convert::ToString("8");
-	}
-/*9*/private: System::Void button9_Click(System::Object^ sender, System::EventArgs^ e) {
-		double result;
-		result = System::Convert::ToDouble(textBox1->Text);
-		if (result == 0) { textBox1->Text = System::Convert::ToString("9"); }
-		else if (result == -1000) { textBox1->Text = System::Convert::ToString("-9"); }
-		else if (result == -0.0001) { textBox1->Text = System::Convert::ToString("-0.9"); }
-		else textBox1->Text += System::Convert::ToString("9");
-	}
-/*0*/private: System::Void button12_Click(System::Object^ sender, System::EventArgs^ e) {
-		double result;
-		result = System::Convert::ToDouble(textBox1->Text);
-		if (result == 0) { textBox1->Text = System::Convert::ToString("0"); }
-		else if (result == -1000) { textBox1->Text = System::Convert::ToString("-0,0001"); }
-		else textBox1->Text += System::Convert::ToString("0");
-	}
-/*,*/private: System::Void button11_Click(System::Object^ sender, System::EventArgs^ e) {
-	int result;
-	result = System::Convert::ToDouble(textBox1->Text);
-	if (result % 1 != 0){}
-	else { textBox1->Text += System::Convert::ToString(","); }
+/*3*/private: System::Void ThreeNumberButton_Click(System::Object^ sender, System::EventArgs^ e) {
+	plus_cifra();
+	double result = (double)glob_rez;
+		if (result == 0) { MainTextBox->Text = System::Convert::ToString("3"); glob_rez += (pow(10,back_cifra()-1)) * 3; }
+		else MainTextBox->Text += System::Convert::ToString("3"); glob_rez += (pow(10, back_cifra() - 1)) * 3;
 }
-/*-*/private: System::Void button10_Click(System::Object^ sender, System::EventArgs^ e) {
+/*4*/private: System::Void FourNumberButton_Click(System::Object^ sender, System::EventArgs^ e) {
 		double result;
-		result = System::Convert::ToDouble(textBox1->Text);
-		if (result == 0) {
-			textBox1->Text = System::Convert::ToString("-1000");
-		}
+		result = System::Convert::ToDouble(MainTextBox->Text);
+		if (result == 0) { MainTextBox->Text = System::Convert::ToString("4"); }
+		else if (result == -1000) { MainTextBox->Text = System::Convert::ToString("-4"); }
+		else if (result == -0.0001) { MainTextBox->Text = System::Convert::ToString("-0.4"); }
+		else MainTextBox->Text += System::Convert::ToString("4");
 	}
-	/*Enter*/private: System::Void button13_Click(System::Object^ sender, System::EventArgs^ e) {
+/*5*/private: System::Void FiveNumberButton_Click(System::Object^ sender, System::EventArgs^ e) {
 		double result;
-		result = System::Convert::ToDouble(textBox1->Text);
+		result = System::Convert::ToDouble(MainTextBox->Text);
+		if (result == 0) { MainTextBox->Text = System::Convert::ToString("5"); }
+		else if (result == -1000) { MainTextBox->Text = System::Convert::ToString("-5"); }
+		else if (result == -0.0001) { MainTextBox->Text = System::Convert::ToString("-0.5"); }
+		else MainTextBox->Text += System::Convert::ToString("5");
+	}
+/*6*/private: System::Void SixNumberButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		double result;
+		result = System::Convert::ToDouble(MainTextBox->Text);
+		if (result == 0) { MainTextBox->Text = System::Convert::ToString("6"); }
+		else if (result == -1000) { MainTextBox->Text = System::Convert::ToString("-6"); }
+		else if (result == -0.0001) { MainTextBox->Text = System::Convert::ToString("-0.6"); }
+		else MainTextBox->Text += System::Convert::ToString("6");
+	}
+/*7*/private: System::Void SevenNumberButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		double result;
+		result = System::Convert::ToDouble(MainTextBox->Text);
+		if (result == 0) { MainTextBox->Text = System::Convert::ToString("7"); }
+		else if (result == -1000) { MainTextBox->Text = System::Convert::ToString("-7"); }
+		else if (result == -0.0001) { MainTextBox->Text = System::Convert::ToString("-0.7"); }
+		else MainTextBox->Text += System::Convert::ToString("7");
+	}
+/*8*/private: System::Void EightNumberButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		double result;
+		result = System::Convert::ToDouble(MainTextBox->Text);
+		if (result == 0) { MainTextBox->Text = System::Convert::ToString("8"); }
+		else if (result == -1000) { MainTextBox->Text = System::Convert::ToString("-8"); }
+		else if (result == -0.0001) { MainTextBox->Text = System::Convert::ToString("-0.8"); }
+		else MainTextBox->Text += System::Convert::ToString("8");
+	}
+/*9*/private: System::Void NineNumberButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		double result;
+		result = System::Convert::ToDouble(MainTextBox->Text);
+		if (result == 0) { MainTextBox->Text = System::Convert::ToString("9"); }
+		else if (result == -1000) { MainTextBox->Text = System::Convert::ToString("-9"); }
+		else if (result == -0.0001) { MainTextBox->Text = System::Convert::ToString("-0.9"); }
+		else MainTextBox->Text += System::Convert::ToString("9");
+	}
+/*0*/private: System::Void ZeroNumberButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		double result;
+		result = System::Convert::ToDouble(MainTextBox->Text);
+		if (result == 0) { MainTextBox->Text = System::Convert::ToString("0"); }
+		else if (result == -1000) { MainTextBox->Text = System::Convert::ToString("-0,0001"); }
+		else MainTextBox->Text += System::Convert::ToString("0");
+	}
+/*,*/private: System::Void CommaButton_Click(System::Object^ sender, System::EventArgs^ e) {
+	int result;
+	result = System::Convert::ToDouble(MainTextBox->Text);
+	if (result % 1 != 0){}
+	else { MainTextBox->Text += System::Convert::ToString(","); }
+}
+/*-*/private: System::Void MinusButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		double result;
+		if (minus_check() == false) {
+			minus_ch = true; glob_rez = glob_rez * (-1);
+		}
+		result = System::Convert::ToDouble(MainTextBox->Text);
+		MainTextBox->Text = System::Convert::ToString(glob_rez);
+	}
+	/*Enter*/private: System::Void EnterTextBoxButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		double result;
+		result = System::Convert::ToDouble(MainTextBox->Text);
 		MessageBox::Show(" ", "Answer");
 	}
-/*Close*/private: System::Void button14_Click(System::Object^ sender, System::EventArgs^ e)
+	/*Close*/private: System::Void CancelWindowButton_Click(System::Object^ sender, System::EventArgs^ e)
 {
+	Application::Exit();
 	}
-	/*e*/private: System::Void button17_Click(System::Object^ sender, System::EventArgs^ e) {
-		MessageBox::Show("", "Exponent");
-}
-/*<-*/private: System::Void button16_Click(System::Object^ sender, System::EventArgs^ e) {
+/*<-*/private: System::Void ClearLastOneButton_Click(System::Object^ sender, System::EventArgs^ e) {
 	double result1;
 	int result2;
-	result1 = System::Convert::ToDouble(textBox1->Text);
+	result1 = System::Convert::ToDouble(MainTextBox->Text);
 	if (result1 > 0) {
 		result2 = result1 / 10;
-		textBox1->Text = System::Convert::ToString(result2);
+		MainTextBox->Text = System::Convert::ToString(result2);
 
 	}
 }
-	/*clr*/private: System::Void button15_Click(System::Object^ sender, System::EventArgs^ e) {
-		textBox1->Text = L"0";
+	/*clr*/private: System::Void ClearTextBoxButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		clear_cifra();
+		MainTextBox->Text = System::Convert::ToString("0");
+
 	}
-	/*Max*/private: System::Void button18_Click(System::Object^ sender, System::EventArgs^ e) {
-		MessageBox::Show("", "Setting max");
+	/*Max*/private: System::Void MaxNumberButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		MainTextBox->Text = System::Convert::ToString("250");
+		glob_rez = 250;
+		skolko_cifr = 3;
+		
 	}
-	/*Min*/private: System::Void button20_Click(System::Object^ sender, System::EventArgs^ e) {
-		MessageBox::Show("", "Setting min");
+	/*Mid*/private: System::Void MidiumNumberButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		MainTextBox->Text = System::Convert::ToString("100");
+		glob_rez = 100;
+		skolko_cifr = 3;
+	}
+	/*Min*/private: System::Void MinimumNumberButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		MainTextBox->Text = System::Convert::ToString("10"); 
+		glob_rez = 10;
+		skolko_cifr = 2;
+
 	}
 };
 }

@@ -17,3 +17,14 @@ Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c5619
 Class Project53.MyForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 glob_rez : Public
+    Int32 skolko_cifr : Public
+    Boolean minus_ch : Public
+    Int32 stnd_znac : Public
+  Methods:
+    minus_check(): PrivateScope, Public, HideBySig
+    plus_cifra(): PrivateScope, Public, HideBySig
+    minus_cifra(): PrivateScope, Public, HideBySig
+    clear_cifra(): PrivateScope, Public, HideBySig
+    back_cifra(): PrivateScope, Public, HideBySig
