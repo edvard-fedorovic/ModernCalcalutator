@@ -399,21 +399,17 @@ namespace Project53 {
 		}
 #pragma endregion
 /*1*/private: System::Void OneNumberButton_Click(System::Object^ sender, System::EventArgs^ e) {
-		double result;
-		result = System::Convert::ToDouble(MainTextBox->Text);
-		if (result == 0) { MainTextBox->Text = System::Convert::ToString("1"); }
-		else if (result == -1000) { MainTextBox->Text = System::Convert::ToString("-1"); }
-		else if (result == -0.0001) { MainTextBox->Text = System::Convert::ToString("-0.1"); }
-		else MainTextBox->Text += System::Convert::ToString("1");
-	}
+	plus_cifra();
+	double result = (double)glob_rez;
+	if (result == 0) { MainTextBox->Text = System::Convert::ToString("1"); glob_rez = (pow(10, back_cifra() - 1)) * 1; }
+	else MainTextBox->Text += System::Convert::ToString("1"); glob_rez += (pow(10, back_cifra() - 1)) * 1;
+}
 /*2*/private: System::Void TwoNumberButton_Click(System::Object^ sender, System::EventArgs^ e) {
-		double result;
-		result = System::Convert::ToDouble(MainTextBox->Text);
-		if (result == 0) { MainTextBox->Text = System::Convert::ToString("2"); }
-		else if (result == '-') { MainTextBox->Text = "-2"; }
-		else if (result == -0.0001) { MainTextBox->Text = System::Convert::ToString("-0.2"); }
-		else MainTextBox->Text += System::Convert::ToString("2");
-	}
+	plus_cifra();
+	double result = (double)glob_rez;
+	if (result == 0) { MainTextBox->Text = System::Convert::ToString("2"); glob_rez += (pow(10, back_cifra() - 1)) * 2; }
+	else MainTextBox->Text += System::Convert::ToString("2"); glob_rez += (pow(10, back_cifra() - 1)) * 2;
+}
 /*3*/private: System::Void ThreeNumberButton_Click(System::Object^ sender, System::EventArgs^ e) {
 	plus_cifra();
 	double result = (double)glob_rez;
@@ -421,60 +417,46 @@ namespace Project53 {
 		else MainTextBox->Text += System::Convert::ToString("3"); glob_rez += (pow(10, back_cifra() - 1)) * 3;
 }
 /*4*/private: System::Void FourNumberButton_Click(System::Object^ sender, System::EventArgs^ e) {
-		double result;
-		result = System::Convert::ToDouble(MainTextBox->Text);
-		if (result == 0) { MainTextBox->Text = System::Convert::ToString("4"); }
-		else if (result == -1000) { MainTextBox->Text = System::Convert::ToString("-4"); }
-		else if (result == -0.0001) { MainTextBox->Text = System::Convert::ToString("-0.4"); }
-		else MainTextBox->Text += System::Convert::ToString("4");
-	}
+	plus_cifra();
+	double result = (double)glob_rez;
+	if (result == 0) { MainTextBox->Text = System::Convert::ToString("4"); glob_rez += (pow(10, back_cifra() - 1)) * 4; }
+	else MainTextBox->Text += System::Convert::ToString("4"); glob_rez += (pow(10, back_cifra() - 1)) * 4;
+}
 /*5*/private: System::Void FiveNumberButton_Click(System::Object^ sender, System::EventArgs^ e) {
-		double result;
-		result = System::Convert::ToDouble(MainTextBox->Text);
-		if (result == 0) { MainTextBox->Text = System::Convert::ToString("5"); }
-		else if (result == -1000) { MainTextBox->Text = System::Convert::ToString("-5"); }
-		else if (result == -0.0001) { MainTextBox->Text = System::Convert::ToString("-0.5"); }
-		else MainTextBox->Text += System::Convert::ToString("5");
-	}
+	plus_cifra();
+	double result = (double)glob_rez;
+	if (result == 0) { MainTextBox->Text = System::Convert::ToString("5"); glob_rez += (pow(10, back_cifra() - 1)) * 5; }
+	else MainTextBox->Text += System::Convert::ToString("5"); glob_rez += (pow(10, back_cifra() - 1)) * 5;
+}
 /*6*/private: System::Void SixNumberButton_Click(System::Object^ sender, System::EventArgs^ e) {
-		double result;
-		result = System::Convert::ToDouble(MainTextBox->Text);
-		if (result == 0) { MainTextBox->Text = System::Convert::ToString("6"); }
-		else if (result == -1000) { MainTextBox->Text = System::Convert::ToString("-6"); }
-		else if (result == -0.0001) { MainTextBox->Text = System::Convert::ToString("-0.6"); }
-		else MainTextBox->Text += System::Convert::ToString("6");
-	}
+	plus_cifra();
+	double result = (double)glob_rez;
+	if (result == 0) { MainTextBox->Text = System::Convert::ToString("6"); glob_rez += (pow(10, back_cifra() - 1)) * 6; }
+	else MainTextBox->Text += System::Convert::ToString("6"); glob_rez += (pow(10, back_cifra() - 1)) * 6;
+}
 /*7*/private: System::Void SevenNumberButton_Click(System::Object^ sender, System::EventArgs^ e) {
-		double result;
-		result = System::Convert::ToDouble(MainTextBox->Text);
-		if (result == 0) { MainTextBox->Text = System::Convert::ToString("7"); }
-		else if (result == -1000) { MainTextBox->Text = System::Convert::ToString("-7"); }
-		else if (result == -0.0001) { MainTextBox->Text = System::Convert::ToString("-0.7"); }
-		else MainTextBox->Text += System::Convert::ToString("7");
-	}
+	plus_cifra();
+	double result = (double)glob_rez;
+	if (result == 0) { MainTextBox->Text = System::Convert::ToString("7"); glob_rez += (pow(10, back_cifra() - 1)) * 7; }
+	else MainTextBox->Text += System::Convert::ToString("7"); glob_rez += (pow(10, back_cifra() - 1)) * 7;
+}
 /*8*/private: System::Void EightNumberButton_Click(System::Object^ sender, System::EventArgs^ e) {
-		double result;
-		result = System::Convert::ToDouble(MainTextBox->Text);
-		if (result == 0) { MainTextBox->Text = System::Convert::ToString("8"); }
-		else if (result == -1000) { MainTextBox->Text = System::Convert::ToString("-8"); }
-		else if (result == -0.0001) { MainTextBox->Text = System::Convert::ToString("-0.8"); }
-		else MainTextBox->Text += System::Convert::ToString("8");
-	}
+	plus_cifra();
+	double result = (double)glob_rez;
+	if (result == 0) { MainTextBox->Text = System::Convert::ToString("8"); glob_rez += (pow(10, back_cifra() - 1)) * 8; }
+	else MainTextBox->Text += System::Convert::ToString("8"); glob_rez += (pow(10, back_cifra() - 1)) * 8;
+}
 /*9*/private: System::Void NineNumberButton_Click(System::Object^ sender, System::EventArgs^ e) {
-		double result;
-		result = System::Convert::ToDouble(MainTextBox->Text);
-		if (result == 0) { MainTextBox->Text = System::Convert::ToString("9"); }
-		else if (result == -1000) { MainTextBox->Text = System::Convert::ToString("-9"); }
-		else if (result == -0.0001) { MainTextBox->Text = System::Convert::ToString("-0.9"); }
-		else MainTextBox->Text += System::Convert::ToString("9");
-	}
+	plus_cifra();
+	double result = (double)glob_rez;
+	if (result == 0) { MainTextBox->Text = System::Convert::ToString("9"); glob_rez += (pow(10, back_cifra() - 1)) * 9; }
+	else MainTextBox->Text += System::Convert::ToString("9"); glob_rez += (pow(10, back_cifra() - 1)) * 9;
+}
 /*0*/private: System::Void ZeroNumberButton_Click(System::Object^ sender, System::EventArgs^ e) {
-		double result;
-		result = System::Convert::ToDouble(MainTextBox->Text);
-		if (result == 0) { MainTextBox->Text = System::Convert::ToString("0"); }
-		else if (result == -1000) { MainTextBox->Text = System::Convert::ToString("-0,0001"); }
-		else MainTextBox->Text += System::Convert::ToString("0");
-	}
+		double result = (double)glob_rez;
+		if (result == 0) { MainTextBox->Text = System::Convert::ToString("0"); glob_rez += (pow(10, back_cifra() - 1)); }
+		else { MainTextBox->Text += System::Convert::ToString("0"); plus_cifra(); glob_rez += (pow(10, back_cifra() - 1)); }
+}
 /*,*/private: System::Void CommaButton_Click(System::Object^ sender, System::EventArgs^ e) {
 	int result;
 	result = System::Convert::ToDouble(MainTextBox->Text);
@@ -490,23 +472,16 @@ namespace Project53 {
 		MainTextBox->Text = System::Convert::ToString(glob_rez);
 	}
 	/*Enter*/private: System::Void EnterTextBoxButton_Click(System::Object^ sender, System::EventArgs^ e) {
-		double result;
-		result = System::Convert::ToDouble(MainTextBox->Text);
 		MessageBox::Show(" ", "Answer");
+		double rezult = (double)glob_rez;
 	}
-	/*Close*/private: System::Void CancelWindowButton_Click(System::Object^ sender, System::EventArgs^ e)
-{
+	/*Close*/private: System::Void CancelWindowButton_Click(System::Object^ sender, System::EventArgs^ e){
 	Application::Exit();
 	}
 /*<-*/private: System::Void ClearLastOneButton_Click(System::Object^ sender, System::EventArgs^ e) {
-	double result1;
-	int result2;
-	result1 = System::Convert::ToDouble(MainTextBox->Text);
-	if (result1 > 0) {
-		result2 = result1 / 10;
-		MainTextBox->Text = System::Convert::ToString(result2);
-
-	}
+	double result = (double)glob_rez;
+	if (result == 0) { MainTextBox->Text = System::Convert::ToString("0"); glob_rez = 0; }
+	else;
 }
 	/*clr*/private: System::Void ClearTextBoxButton_Click(System::Object^ sender, System::EventArgs^ e) {
 		clear_cifra();

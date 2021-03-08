@@ -1,8 +1,25 @@
 ﻿  MyForm.cpp
-C:\Users\Edvard\source\repos\Project53\Project53\MyForm.h(420,1): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
-C:\Users\Edvard\source\repos\Project53\Project53\MyForm.h(421,1): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
-C:\Users\Edvard\source\repos\Project53\Project53\MyForm.h(480,36): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\Edvard\source\repos\Project53\Project53\MyForm.h(506,21): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Edvard\source\repos\Project53\Project53\MyForm.h(404,112): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Edvard\source\repos\Project53\Project53\MyForm.h(405,1): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Edvard\source\repos\Project53\Project53\MyForm.h(410,1): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Edvard\source\repos\Project53\Project53\MyForm.h(411,1): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Edvard\source\repos\Project53\Project53\MyForm.h(416,1): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Edvard\source\repos\Project53\Project53\MyForm.h(417,1): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Edvard\source\repos\Project53\Project53\MyForm.h(422,1): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Edvard\source\repos\Project53\Project53\MyForm.h(423,1): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Edvard\source\repos\Project53\Project53\MyForm.h(428,1): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Edvard\source\repos\Project53\Project53\MyForm.h(429,1): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Edvard\source\repos\Project53\Project53\MyForm.h(434,1): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Edvard\source\repos\Project53\Project53\MyForm.h(435,1): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Edvard\source\repos\Project53\Project53\MyForm.h(440,1): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Edvard\source\repos\Project53\Project53\MyForm.h(441,1): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Edvard\source\repos\Project53\Project53\MyForm.h(446,1): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Edvard\source\repos\Project53\Project53\MyForm.h(447,1): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Edvard\source\repos\Project53\Project53\MyForm.h(452,1): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Edvard\source\repos\Project53\Project53\MyForm.h(453,1): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Edvard\source\repos\Project53\Project53\MyForm.h(457,1): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Edvard\source\repos\Project53\Project53\MyForm.h(458,1): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Edvard\source\repos\Project53\Project53\MyForm.h(462,36): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
 C:\Users\Edvard\source\repos\Project53\Project53\MyForm.cpp(7,15): warning C4551: function call missing argument list
   MyForm.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
   Project53.vcxproj -> C:\Users\Edvard\source\repos\Project53\Debug\Project53.exe
